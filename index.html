@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Современный урок русского языка и литературы в контексте ценностного воспитания личности</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#0d1b3a;font-family:Georgia,'Times New Roman',serif;overflow:hidden}
+body{display:flex;align-items:center;justify-content:center}
+.st{position:relative;width:min(100vw,calc(100vh*1671/941));aspect-ratio:1671/941;box-shadow:0 0 40px #000a}
+.sl{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s,visibility .7s}.sl.on{opacity:1;visibility:visible}
+.sl>img{position:absolute;inset:0;width:100%;height:100%;display:block;user-select:none;-webkit-user-drag:none}
+.sl>img.qrfix{position:absolute;inset:auto;height:auto;aspect-ratio:1;pointer-events:none}.hs{position:absolute;border:.35vmin solid #e8c04a;border-radius:1vmin;background:#e8c04a1c;cursor:pointer;padding:0;animation:pl 1.9s infinite;transition:transform .2s,background .2s}
+.hs:hover,.hs:focus-visible{transform:scale(1.05);background:#e8c04a45;outline:none}
+.hs span{position:absolute;left:50%;top:calc(100% + .8vmin);transform:translateX(-50%);white-space:nowrap;background:linear-gradient(#f3d66a,#d4a82c);color:#2a1a08;font:700 clamp(12px,1.9vmin,22px) Georgia,serif;padding:.5vmin 1.6vmin;border-radius:3vmin;box-shadow:0 .4vmin 1vmin #0007}
+@keyframes pl{0%,100%{box-shadow:0 0 0 0 #e8c04aaa}50%{box-shadow:0 0 0 1.2vmin #e8c04a00}}
+.ar{position:fixed;top:50%;transform:translateY(-50%);width:clamp(40px,6vmin,64px);height:clamp(40px,6vmin,64px);border-radius:50%;border:2px solid #e8c04a;background:#0d1b3acc;color:#f3d66a;font-size:clamp(20px,3.2vmin,34px);cursor:pointer;z-index:5}.ar:hover{background:#1f3a78}.ar.l{left:1.2vmin}.ar.r{right:1.2vmin}.ar:disabled{opacity:.25;cursor:default}
+.bar{position:fixed;left:0;right:0;bottom:1vmin;display:flex;justify-content:center;align-items:center;gap:10px;z-index:5;opacity:.85}
+.dot{width:14px;height:14px;border-radius:50%;border:2px solid #e8c04a;background:#0d1b3acc;cursor:pointer;padding:0}.dot.on{background:#e8c04a}
+.fs{position:fixed;top:1vmin;right:1.2vmin;z-index:5;border:2px solid #e8c04a;background:#0d1b3acc;color:#f3d66a;border-radius:20px;padding:5px 14px;font:700 14px Georgia,serif;cursor:pointer}.fs:hover{background:#1f3a78}
+.pg{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,#8b1e1a,#e8c04a);z-index:6;transition:width .4s}
+#ov{position:fixed;inset:0;background:#050a1ccc;display:none;align-items:center;justify-content:center;z-index:20;padding:2vmin}#ov.on{display:flex}
+.md{width:min(1200px,96vw);height:min(92vh,900px);background:#f6ecd0;border:4px double #7a5a2a;border-radius:10px;display:flex;flex-direction:column;overflow:hidden;animation:up .35s}@keyframes up{from{opacity:0;transform:translateY(20px)}}
+.mh{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 14px;background:linear-gradient(#5a3a1c,#3a2410);color:#f3dfa8}.mh h2{margin:0;font-size:clamp(15px,2.2vmin,22px);flex:1;min-width:160px}
+.mb{font:700 14px Georgia,serif;color:#2a1a08;background:linear-gradient(#f3d66a,#d4a82c);border:0;border-radius:18px;padding:6px 14px;cursor:pointer;text-decoration:none;display:inline-block}.mb:hover{filter:brightness(1.1)}.mb.x{background:linear-gradient(#c8453b,#8b1e1a);color:#fff}
+.mc{flex:1;min-height:0;overflow:auto;padding:18px 28px;color:#2a1a08;font-size:clamp(15px,2.1vmin,20px);line-height:1.55}.mc p{margin:.5em 0}
+iframe{flex:1;border:0;width:100%;background:#fff}
+.tt{position:fixed;left:50%;bottom:7vmin;transform:translateX(-50%);background:#222;color:#fff;padding:8px 18px;border-radius:20px;display:none;z-index:30}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Пятый слайд: самостоятельная страница внутри презентации */
+.final{position:absolute;inset:0;display:grid;grid-template-columns:48% 52%;padding:7% 10% 8%;gap:4%;background:url("Картинки/final_book_clean.jpg") center/100% 100% no-repeat;color:#36251c}
+.final:before{content:none}
+.finalpage{position:relative;min-width:0;padding:4% 3%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;z-index:1}
+.finalpage.left{border-right:none}
+.final h1{font-size:clamp(16px,2.8vw,38px);line-height:1.08;margin:.1em 0 .3em;color:#672e2b}
+.final .eyebrow{font-size:clamp(10px,1.1vw,17px);letter-spacing:.1em;color:#654d32;font-weight:bold}
+.final .question{font-size:clamp(12px,1.55vw,24px);line-height:1.25;margin:.5em 0;color:#332419}
+.final video{width:100%;max-height:76%;object-fit:contain;border:0;border-radius:0;background:transparent;box-shadow:none}
+.final button{border:1px solid #b18c45;border-radius:22px;padding:.55em 1.1em;background:#632f32;color:#fff1cf;font:bold clamp(11px,1.1vw,17px) Georgia;cursor:pointer;margin:.5em}
+.final .qrbox{background:#fff9ed;border:2px solid #7c5c30;border-radius:6px;width:clamp(66px,10vw,155px);height:clamp(66px,10vw,155px);display:grid;place-items:center;margin:.5em auto;overflow:hidden}
+.final .qrbox img{width:100%;height:100%;object-fit:contain}
+.final .small{font:clamp(10px,.9vw,15px) Georgia;max-width:96%;overflow-wrap:anywhere}
+.final .results{width:94%;font-size:clamp(10px,1vw,17px);text-align:left}
+.final .result{margin:.4em 0}.final .resulthead{display:flex;justify-content:space-between;gap:4px}.final .track{height:clamp(6px,.9vw,13px);background:#9c8d74;border-radius:15px;overflow:hidden}.final .fill{height:100%;background:linear-gradient(90deg,#8d4038,#c68d42);width:0%;transition:width .4s}
+.final .status{font-size:clamp(10px,.95vw,15px);color:#6c3b35;margin:.4em 0}
+.final .ending{font-style:italic;font-size:clamp(11px,1.15vw,18px);line-height:1.3;margin:.3em}
+@media(max-width:600px){.final{padding:5% 5%;gap:0}.finalpage{padding:2%}.final .qrbox{width:70px;height:70px}}
+
+.finalpage.right{background:transparent}.finalpage.left{background:transparent}.final .ending{color:#69432b}
+</style></head><body>
+<div class="pg" id="pg"></div>
+<div class="st" id="st"></div>
+<button class="ar l" id="pv" aria-label="Назад">◀</button><button class="ar r" id="nx" aria-label="Далее">▶</button>
+<button class="fs" id="fs">⛶ Во весь экран</button>
+<div class="bar" id="bar"></div>
+<div id="ov"><div class="md"><div class="mh"><h2 id="mt"></h2><span id="ma"></span><button class="mb x" id="mx">✕ Закрыть</button></div><div id="mbd" style="display:flex;flex-direction:column;flex:1;min-height:0"></div></div></div>
+<div class="tt" id="tt"></div>
+<template id="pr"><p>Ты — эксперт по созданию интерактивных образовательных HTML-квестов с
+глубокими знаниями педагогики, геймдизайна и веб-разработки. Создай
+полноценный, готовый к использованию HTML-файл с образовательным квестом
+по следующим параметрам:</p>
+<p>📚 ОСНОВНАЯ ИНФОРМАЦИЯ:</p>
+<p>• Предмет/Тема: литература Тема гуманизма и милосердия в повести
+Н.В.Гоголя "Шинель"</p>
+<p>• Возраст/Класс: 10-11 класс (15-17 лет)</p>
+<p>• Тип квеста: Детективный квест</p>
+<p>• Длительность: 30 минут</p>
+<p>• Количество этапов: 7</p>
+<p>🎯 УЧЕБНЫЕ ЦЕЛИ:</p>
+<p>9.2.7.1 определять способы выражения авторского отношения к
+героям;</p>
+<p>9.2.8.1 анализировать способы авторской характеристики героев,
+изобразительные средства, в том числе звукопись и цветопись, фигуры
+поэтического синтаксиса (риторические фигуры, антитезы, перифразы,
+инверсии, анафоры, градация), литературные приемы (символ,
+психологический параллелизм, автобиографизм);</p>
+<p>Ценности «Адал Азамат»</p>
+<p>📖 СЮЖЕТ/ЛЕГЕНДА:</p>
+<p>Дело о потерянной человечности» с загадочного происшествия в
+Петербурге.</p>
+<p>⚙️ ТЕХНИЧЕСКИЕ ТРЕБОВАНИЯ:</p>
+<p>• Дополнительные функции: Система очков, Прогресс-бар, Адаптивный
+дизайн, Сохранение прогресса</p>
+<p>• Стиль дизайна: Тематический (соответствует сюжету)</p>
+<p>• Дополнительные пожелания: «Шинель. Дело о потерянной человечности»
+с загадочного происшествия в Петербурге. Ученики должны сначала
+подумать, что расследуют обычную кражу шинели, но постепенно понять:
+настоящее преступление, которое им предстоит исследовать, гораздо глубже
+— это равнодушие к человеку.Город погружён в холод и туман. По
+заснеженным улицам спешат чиновники, гремят экипажи, мерцают огни
+фонарей. Среди тысяч жителей столицы живёт незаметный человек — Акакий
+Акакиевич Башмачкин.</p>
+<p>Он не совершал подвигов, не стремился к богатству и власти. Его жизнь
+была проста: служба, переписывание бумаг и возвращение в свою скромную
+комнату.</p>
+<p>Но однажды всё изменилось…</p>
+<p>После долгих месяцев лишений у Башмачкина появилась новая шинель. Она
+стала для него не просто одеждой, а символом надежды на лучшую
+жизнь.</p>
+<p>Однако в одну морозную ночь неизвестные похитили шинель.</p>
+<p>Вскоре после этого Акакий Акакиевич умер.</p>
+<p>Казалось бы, дело простое: кража, болезнь, смерть.</p>
+<p>Но в материалах расследования обнаружились странные
+обстоятельства…</p>
+<p>Почему сослуживцы годами унижали беззащитного чиновника?</p>
+<p>Почему человек, к которому он обратился за помощью, не проявил
+сочувствия?</p>
+<p>Почему окружающие заметили его страдания слишком поздно?</p>
+<p>И действительно ли трагедия началась в ту ночь, когда исчезла
+шинель?</p>
+<p>Дело вновь открыто.</p>
+<p>Теперь вы — литературные детективы. Вам предстоит восстановить
+события, изучить свидетельства, раскрыть скрытые смыслы и определить,
+кто несёт нравственную ответственность за трагедию маленького
+человека.</p>
+<p>Но помните: в этом расследовании недостаточно найти виновного.</p>
+<p>Вам предстоит выяснить, что страшнее — преступление или человеческое
+равнодушие.</p>
+<p>Как перейти от легенды к игре</p>
+<p>После вступления на экране появляется старинная папка:</p>
+<p>ДЕЛО № 1842</p>
+<p>Литературное расследование</p>
+<p>Объект расследования: трагическая судьба Акакия Акакиевича
+Башмачкина.</p>
+<p>Известные обстоятельства: унижения на службе, кража шинели,
+безуспешное обращение за помощью, болезнь и смерть.</p>
+<p>Главная загадка: «Кто или что погубило Башмачкина?»</p>
+<p>Миссия детектива: собрать пять доказательств и вынести обоснованный
+нравственный вердикт.</p>
+<p>Кодекс детектива «Адал азамат»: справедливость, ответственность,
+уважение к человеческому достоинству.</p>
+<p>Открыть дело</p>
+<p>Сюжетная интрига для пяти этапов</p>
+<p>Я предлагаю, чтобы на каждом этапе ученик получал не просто баллы, а
+одно доказательство, необходимое для окончательного расследования.</p>
+<p>Этап урока Детективный эпизод Найденное доказательство</p>
+<p>1. Эмоциональное погружение «Последний крик о помощи» Свидетельство о
+страданиях героя</p>
+<p>2. Анализ текста «Тайны старого архива» Досье на Башмачкина</p>
+<p>3. Нравственная дилемма «Допрос свидетелей» Показания о
+равнодушии</p>
+<p>4. Связь с жизнью «Дело продолжается» Доказательство актуальности
+проблемы</p>
+<p>5. Рефлексия «Окончательный вердикт» Кодекс человечности</p>
+<p>Особенно эффектным будет финал. После прохождения этапов ученик
+открывает последний конверт, на котором написано:</p>
+<p>«Внимание! В ходе расследования установлено: шинель была похищена за
+одну ночь. Но человеческое достоинство Башмачкина попиралось годами.
+Теперь ответьте: когда на самом деле началась его трагедия?»</p>
+<p>Именно этот вопрос станет кульминацией игры и позволит связать
+литературный анализ с ценностью «Справедливость и ответственность»
+программы «Адал азамат».</p>
+<p>Для стартового экрана я бы выбрал короткую интригующую фразу:</p>
+<p>«Украли шинель. Погиб человек. Но кто украл у него право на
+человеческое достоинство?» для каждого этапа создай по 2 задания. сделай
+вкладку с возможностью добавлять свою картинку фона игры. не давать
+возможность исправлять ответ после нажатия кнопки проверить. При
+использовании подсказки снимать один балл. сделай возможность отправить
+результат игры учителю. результаты должны быть видны учителю после их
+получения</p>
+<p>📋 СТРУКТУРА HTML-ФАЙЛА:</p>
+<p>1. ЕДИНЫЙ HTML-ФАЙЛ со встроенными CSS и JavaScript (без внешних
+зависимостей)</p>
+<p>2. ОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ ИНТЕРФЕЙСА:</p>
+<p>• Стартовый экран с названием квеста, сюжетом и кнопкой "Начать"</p>
+<p>• Экраны этапов с заданиями (каждый этап — отдельный "экран")</p>
+<p>• Финальный экран с результатами и возможностью начать заново</p>
+<p>• Навигация между этапами (кнопки "Назад" если уместно)</p>
+<p>• Индикатор текущего этапа и общего прогресса</p>
+<p>3. ТРЕБОВАНИЯ К ЗАДАНИЯМ:</p>
+<p>• Каждое задание должно проверять конкретный навык/знание из учебных
+целей</p>
+<p>• Разнообразие типов заданий: выбор ответа, ввод текста,
+перетаскивание, сопоставление, решение задачи</p>
+<p>• Мгновенная обратная связь (правильно/неправильно с объяснением)</p>
+<p>• Возможность повторить задание при ошибке</p>
+<p>• Подсказки (если выбрано в функциях)</p>
+<p>4. ПЕДАГОГИЧЕСКИЕ ТРЕБОВАНИЯ:</p>
+<p>• Язык и сложность заданий строго соответствуют возрасту</p>
+<p>• Постепенное усложнение от этапа к этапу</p>
+<p>• Каждое задание имеет чёткий критерий правильности</p>
+<p>• В финале — краткое резюме изученного материала</p>
+<p>• Возможность для учителя увидеть результаты (вывод на финальном
+экране)</p>
+<p>5. ДИЗАЙН И UX:</p>
+<p>• Современный, привлекательный дизайн, соответствующий указанному
+стилю</p>
+<p>• Адаптивная вёрстка (работает на ПК, планшетах, смартфонах)</p>
+<p>• Плавные переходы между экранами</p>
+<p>• Интуитивно понятный интерфейс</p>
+<p>• Использование эмодзи и иконок для визуальной привлекательности</p>
+<p>• Читаемые шрифты и достаточные отступы</p>
+<p>6. ТЕХНИЧЕСКАЯ РЕАЛИЗАЦИЯ:</p>
+<p>• Чистый, комментированный код</p>
+<p>• Семантическая HTML-разметка</p>
+<p>• CSS с использованием переменных для лёгкой кастомизации цветов</p>
+<p>• JavaScript без внешних библиотек (vanilla JS)</p>
+<p>• Обработка всех возможных пользовательских действий</p>
+<p>• Сохранение состояния (если выбрано в функциях)</p>
+<p>7. ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ:</p>
+<p>• Инструкция для учителя в комментариях HTML (как настроить, изменить
+задания)</p>
+<p>• Адаптация сложности под возраст (для младших — проще, для старших —
+сложнее)</p>
+<p>• Мотивационные сообщения при правильных/неправильных ответах</p>
+<p>• Финальная статистика: время прохождения, количество правильных
+ответов, процент успеха</p>
+<p>🎨 ОСОБЫЕ УКАЗАНИЯ ПО ТИПУ КВЕСТА:</p>
+<p>• Создай атмосферу расследования: улики, подозреваемые, логические
+цепочки</p>
+<p>• Используй детективную тематику в дизайне (лупа, отпечатки,
+досье)</p>
+<p>📝 ФОРМАТ ОТВЕТА:</p>
+<p>Предоставь ПОЛНЫЙ ГОТОВЫЙ HTML-код в одном блоке кода. Код должен
+быть полностью рабочим при открытии в браузере. Не используй
+плейсхолдеры или комментарии типа "добавьте сюда код". Весь функционал
+должен быть реализован.</p>
+<p>После кода добавь краткую инструкцию для учителя:</p>
+<p>1. Как открыть файл</p>
+<p>2. Как настроить/изменить задания (укажи конкретные места в коде)</p>
+<p>3. Как использовать на уроке</p>
+<p>Начинай создание HTML-квеста прямо сейчас. Код должен быть
+профессионального качества, готовым к немедленному использованию в
+образовательном процессе.</p>
+</template>
+<script>
+function finalMarkup(){return `<div class="final"><section class="finalpage left"><div class="eyebrow">ЦЕННОСТИ «АДАЛ АЗАМАТ»</div><h1>От знаний — к воспитанию личности</h1><div class="question">Готовы ли вы превратить обычный урок в увлекательное приключение, которое воспитывает честного гражданина?</div><div class="qrbox" id="vote-qr"><span class="small">QR появится после настройки</span></div><div class="small" id="vote-link">Ссылка для участников будет здесь</div><div class="results" id="vote-results"><div class="result"><div class="resulthead"><span>Да, готов(а) создавать!</span><b id="v0">—</b></div><div class="track"><div class="fill" id="f0"></div></div></div><div class="result"><div class="resulthead"><span>Хочу попробовать!</span><b id="v1">—</b></div><div class="track"><div class="fill" id="f1"></div></div></div><div class="result"><div class="resulthead"><span>Хочу узнать больше!</span><b id="v2">—</b></div><div class="track"><div class="fill" id="f2"></div></div></div></div><div class="status" id="vote-status">Ожидание настройки онлайн-голосования</div></section><section class="finalpage right"><video id="ak-video" preload="auto" playsinline src="Видео/akakiy.mp4"></video><button type="button" id="play-ak" onclick="const v=document.getElementById('ak-video');if(v.paused){v.play();this.textContent='⏸ Пауза'}else{v.pause();this.textContent='▶ Слушать Акакия'}">▶ Слушать Акакия</button><div class="ending">«Технологии помогают учить. Человечность помогает воспитывать»</div></section></div>`}
+const S=[
+{img:'Картинки/1.jpg',alt:'Титульный слайд: VI дистанционная международная конференция'},
+{img:'Картинки/2.jpg',alt:'Литературный HTML-квест «Дело о потерянной человечности». Готовый промпт',hs:{x:18.55,y:42.5,w:16.46,h:28.2,t:'prompt',l:'Открыть готовый промпт'}},
+{img:'Картинки/3.jpg',alt:'Литературный HTML-квест по повести «Шинель». Сканируй и начни игру',qr:{x:62.72,y:41.66,w:17.95,src:'Картинки/qr_game.png'},hs:{x:62.72,y:41.66,w:17.95,h:31.88,t:'game',l:'Начать игру'}},
+{img:'Картинки/4.jpg',alt:'Авторский генератор промптов',hs:{x:62.28,y:42.46,w:13.65,h:24,t:'gen',l:'Открыть генератор'}},
+{final:true,alt:'Финал: Акакий Акакиевич и голосование «Адал азамат»'}];
+const $=s=>document.querySelector(s),st=$('#st');let cur=0,open=false;
+S.forEach((s,i)=>{const d=document.createElement('div');d.className='sl';d.innerHTML=s.final?finalMarkup():`<img src="${s.img}" alt="${s.alt}">`;
+ if(s.qr){const q=document.createElement('img');q.className='qrfix';q.alt='QR-код: начать игру';q.src=s.qr.src;q.style.cssText=`left:${s.qr.x}%;top:${s.qr.y}%;width:${s.qr.w}%`;d.append(q)}
+ if(s.hs){const b=document.createElement('button');b.className='hs';b.style.cssText=`left:${s.hs.x}%;top:${s.hs.y}%;width:${s.hs.w}%;height:${s.hs.h}%`;b.setAttribute('aria-label',s.hs.l);b.innerHTML=`<span>${s.hs.l}</span>`;b.onclick=()=>openM(s.hs.t);d.append(b)}
+ st.append(d);const dt=document.createElement('button');dt.className='dot';dt.setAttribute('aria-label','Слайд '+(i+1));dt.onclick=()=>show(i);$('#bar').append(dt)});
+const sl=[...document.querySelectorAll('.sl')],dots=[...document.querySelectorAll('.dot')];
+function show(n){if(n<0||n>=S.length)return;const v=document.querySelector('#ak-video');if(v&&n!==4){v.pause();v.currentTime=0;}cur=n;sl.forEach((e,i)=>e.classList.toggle('on',i==n));dots.forEach((e,i)=>e.classList.toggle('on',i==n));$('#pv').disabled=n==0;$('#nx').disabled=n==S.length-1;$('#pg').style.width=((n+1)/S.length*100)+'%';try{localStorage.setItem('qr_pres_cur',n)}catch(e){}}
+function tt(m){const t=$('#tt');t.textContent=m;t.style.display='block';clearTimeout(tt.h);tt.h=setTimeout(()=>t.style.display='none',2500)}
+function openM(t){const ov=$('#ov'),b=$('#mbd'),a=$('#ma');b.innerHTML='';a.innerHTML='';open=true;
+ if(t=='prompt'){$('#mt').textContent='📚 Готовый промпт: «Дело о потерянной человечности»';const c=document.createElement('div');c.className='mc';c.id='pc';c.append($('#pr').content.cloneNode(true));b.append(c);
+  a.innerHTML='<button class="mb" id="cp">📋 Копировать промпт</button> <a class="mb" href="Материалы/prompt.docx" download>⬇ Скачать .docx</a>';
+  $('#cp').onclick=async()=>{const txt=$('#pc').innerText;try{await navigator.clipboard.writeText(txt);tt('Промпт скопирован')}catch(e){const r=document.createRange();r.selectNodeContents($('#pc'));const s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');tt('Промпт скопирован')}catch(x){tt('Выделите текст и нажмите Ctrl+C')}}}}
+ else{const g=t=='game',u=g?'Материалы/igra-shinel.html':'Материалы/generator.html';$('#mt').textContent=g?'🎮 Литературный HTML-квест «Шинель. Дело о потерянной человечности»':'✨ Авторский генератор промптов';
+  b.innerHTML=`<iframe src="${u}" allow="clipboard-write; fullscreen" title="${g?'Игра':'Генератор'}"></iframe>`;a.innerHTML=`<a class="mb" href="${u}" target="_blank" rel="noopener">↗ В новой вкладке</a>`}
+ ov.classList.add('on');$('#mx').focus()}
+function closeM(){open=false;$('#ov').classList.remove('on');$('#mbd').innerHTML=''}
+$('#mx').onclick=closeM;$('#ov').onclick=e=>{if(e.target.id=='ov')closeM()};
+$('#pv').onclick=()=>show(cur-1);$('#nx').onclick=()=>show(cur+1);
+document.addEventListener('keydown',e=>{if(e.key=='Escape'){closeM();return}if(open)return;if(['ArrowRight','PageDown',' '].includes(e.key)){show(cur+1);e.preventDefault()}if(['ArrowLeft','PageUp'].includes(e.key))show(cur-1);if(e.key=='Home')show(0);if(e.key=='End')show(S.length-1)});
+let x0=null;st.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});st.addEventListener('touchend',e=>{if(x0==null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>70)show(cur+(d<0?1:-1));x0=null});
+$('#fs').onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}catch(e){}};
+let c0=0;try{c0=+localStorage.getItem('qr_pres_cur')||0}catch(e){}show(Math.min(c0,S.length-1));
+const ac=document.getElementById('ak-video');if(ac)ac.addEventListener('ended',()=>{document.getElementById('play-ak').textContent='▶ Повторить речь'});
+</script><script type="module" src="голосование.js"></script></body></html>
