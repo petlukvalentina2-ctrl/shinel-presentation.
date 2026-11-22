@@ -26,7 +26,7 @@ iframe{flex:1;border:0;width:100%;background:#fff}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 /* Пятый слайд: самостоятельная страница внутри презентации */
-.final{position:absolute;inset:0;display:grid;grid-template-columns:48% 52%;padding:7% 10% 8%;gap:4%;background:url("Картинки/final_book_clean.jpg") center/100% 100% no-repeat;color:#36251c}
+.final{position:absolute;inset:0;display:grid;grid-template-columns:48% 52%;padding:7% 10% 8%;gap:4%;background:url("final_book_clean.jpg") center/100% 100% no-repeat;color:#36251c}
 .final:before{content:none}
 .finalpage{position:relative;min-width:0;padding:4% 3%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;z-index:1}
 .finalpage.left{border-right:none}
@@ -222,12 +222,12 @@ iframe{flex:1;border:0;width:100%;background:#fff}
 образовательном процессе.</p>
 </template>
 <script>
-function finalMarkup(){return `<div class="final"><section class="finalpage left"><div class="eyebrow">ЦЕННОСТИ «АДАЛ АЗАМАТ»</div><h1>От знаний — к воспитанию личности</h1><div class="question">Готовы ли вы превратить обычный урок в увлекательное приключение, которое воспитывает честного гражданина?</div><div class="qrbox" id="vote-qr"><span class="small">QR появится после настройки</span></div><div class="small" id="vote-link">Ссылка для участников будет здесь</div><div class="results" id="vote-results"><div class="result"><div class="resulthead"><span>Да, готов(а) создавать!</span><b id="v0">—</b></div><div class="track"><div class="fill" id="f0"></div></div></div><div class="result"><div class="resulthead"><span>Хочу попробовать!</span><b id="v1">—</b></div><div class="track"><div class="fill" id="f1"></div></div></div><div class="result"><div class="resulthead"><span>Хочу узнать больше!</span><b id="v2">—</b></div><div class="track"><div class="fill" id="f2"></div></div></div></div><div class="status" id="vote-status">Ожидание настройки онлайн-голосования</div></section><section class="finalpage right"><video id="ak-video" preload="auto" playsinline src="Видео/akakiy.mp4"></video><button type="button" id="play-ak" onclick="const v=document.getElementById('ak-video');if(v.paused){v.play();this.textContent='⏸ Пауза'}else{v.pause();this.textContent='▶ Слушать Акакия'}">▶ Слушать Акакия</button><div class="ending">«Технологии помогают учить. Человечность помогает воспитывать»</div></section></div>`}
+function finalMarkup(){return `<div class="final"><section class="finalpage left"><div class="eyebrow">ЦЕННОСТИ «АДАЛ АЗАМАТ»</div><h1>От знаний — к воспитанию личности</h1><div class="question">Готовы ли вы превратить обычный урок в увлекательное приключение, которое воспитывает честного гражданина?</div><div class="qrbox" id="vote-qr"><span class="small">QR появится после настройки</span></div><div class="small" id="vote-link">Ссылка для участников будет здесь</div><div class="results" id="vote-results"><div class="result"><div class="resulthead"><span>Да, готов(а) создавать!</span><b id="v0">—</b></div><div class="track"><div class="fill" id="f0"></div></div></div><div class="result"><div class="resulthead"><span>Хочу попробовать!</span><b id="v1">—</b></div><div class="track"><div class="fill" id="f1"></div></div></div><div class="result"><div class="resulthead"><span>Хочу узнать больше!</span><b id="v2">—</b></div><div class="track"><div class="fill" id="f2"></div></div></div></div><div class="status" id="vote-status">Ожидание настройки онлайн-голосования</div></section><section class="finalpage right"><video id="ak-video" preload="auto" playsinline src="akakiy.mp4"></video><button type="button" id="play-ak" onclick="const v=document.getElementById('ak-video');if(v.paused){v.play();this.textContent='⏸ Пауза'}else{v.pause();this.textContent='▶ Слушать Акакия'}">▶ Слушать Акакия</button><div class="ending">«Технологии помогают учить. Человечность помогает воспитывать»</div></section></div>`}
 const S=[
-{img:'Картинки/1.jpg',alt:'Титульный слайд: VI дистанционная международная конференция'},
-{img:'Картинки/2.jpg',alt:'Литературный HTML-квест «Дело о потерянной человечности». Готовый промпт',hs:{x:18.55,y:42.5,w:16.46,h:28.2,t:'prompt',l:'Открыть готовый промпт'}},
-{img:'Картинки/3.jpg',alt:'Литературный HTML-квест по повести «Шинель». Сканируй и начни игру',qr:{x:62.72,y:41.66,w:17.95,src:'Картинки/qr_game.png'},hs:{x:62.72,y:41.66,w:17.95,h:31.88,t:'game',l:'Начать игру'}},
-{img:'Картинки/4.jpg',alt:'Авторский генератор промптов',hs:{x:62.28,y:42.46,w:13.65,h:24,t:'gen',l:'Открыть генератор'}},
+{img:'1.jpg',alt:'Титульный слайд: VI дистанционная международная конференция'},
+{img:'2.jpg',alt:'Литературный HTML-квест «Дело о потерянной человечности». Готовый промпт',hs:{x:18.55,y:42.5,w:16.46,h:28.2,t:'prompt',l:'Открыть готовый промпт'}},
+{img:'3.jpg',alt:'Литературный HTML-квест по повести «Шинель». Сканируй и начни игру',qr:{x:62.72,y:41.66,w:17.95,src:'qr_game.png'},hs:{x:62.72,y:41.66,w:17.95,h:31.88,t:'game',l:'Начать игру'}},
+{img:'4.jpg',alt:'Авторский генератор промптов',hs:{x:62.28,y:42.46,w:13.65,h:24,t:'gen',l:'Открыть генератор'}},
 {final:true,alt:'Финал: Акакий Акакиевич и голосование «Адал азамат»'}];
 const $=s=>document.querySelector(s),st=$('#st');let cur=0,open=false;
 S.forEach((s,i)=>{const d=document.createElement('div');d.className='sl';d.innerHTML=s.final?finalMarkup():`<img src="${s.img}" alt="${s.alt}">`;
@@ -239,9 +239,9 @@ function show(n){if(n<0||n>=S.length)return;const v=document.querySelector('#ak-
 function tt(m){const t=$('#tt');t.textContent=m;t.style.display='block';clearTimeout(tt.h);tt.h=setTimeout(()=>t.style.display='none',2500)}
 function openM(t){const ov=$('#ov'),b=$('#mbd'),a=$('#ma');b.innerHTML='';a.innerHTML='';open=true;
  if(t=='prompt'){$('#mt').textContent='📚 Готовый промпт: «Дело о потерянной человечности»';const c=document.createElement('div');c.className='mc';c.id='pc';c.append($('#pr').content.cloneNode(true));b.append(c);
-  a.innerHTML='<button class="mb" id="cp">📋 Копировать промпт</button> <a class="mb" href="Материалы/prompt.docx" download>⬇ Скачать .docx</a>';
+  a.innerHTML='<button class="mb" id="cp">📋 Копировать промпт</button> <a class="mb" href="prompt.docx" download>⬇ Скачать .docx</a>';
   $('#cp').onclick=async()=>{const txt=$('#pc').innerText;try{await navigator.clipboard.writeText(txt);tt('Промпт скопирован')}catch(e){const r=document.createRange();r.selectNodeContents($('#pc'));const s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');tt('Промпт скопирован')}catch(x){tt('Выделите текст и нажмите Ctrl+C')}}}}
- else{const g=t=='game',u=g?'Материалы/igra-shinel.html':'Материалы/generator.html';$('#mt').textContent=g?'🎮 Литературный HTML-квест «Шинель. Дело о потерянной человечности»':'✨ Авторский генератор промптов';
+ else{const g=t=='game',u=g?'igra-shinel.html':'generator.html';$('#mt').textContent=g?'🎮 Литературный HTML-квест «Шинель. Дело о потерянной человечности»':'✨ Авторский генератор промптов';
   b.innerHTML=`<iframe src="${u}" allow="clipboard-write; fullscreen" title="${g?'Игра':'Генератор'}"></iframe>`;a.innerHTML=`<a class="mb" href="${u}" target="_blank" rel="noopener">↗ В новой вкладке</a>`}
  ov.classList.add('on');$('#mx').focus()}
 function closeM(){open=false;$('#ov').classList.remove('on');$('#mbd').innerHTML=''}
