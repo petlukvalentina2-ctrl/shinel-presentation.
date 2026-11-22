@@ -1,9 +1,12 @@
-import {subscribe} from './firebase-vote.js';
+import {firebaseConfig,publicPresentationUrl,pollId} from './настройки-голосования.js';
 const status=document.getElementById('vote-status');
-const url=new URL('голосовать.html',location.href).href;
-const link=document.getElementById('vote-link');
-const qr=document.getElementById('vote-qr');
-if(link){link.textContent=url;link.style.overflowWrap='anywhere'}
-if(qr){qr.innerHTML='';const im=document.createElement('img');im.alt='QR для голосования';im.style.cssText='width:100%;height:100%;object-fit:contain;background:white';im.src='https://api.qrserver.com/v1/create-qr-code/?size=280x280&data='+encodeURIComponent(url);im.onerror=()=>{qr.textContent='Откройте ссылку под QR-кодом'};qr.append(im)}
-if(location.protocol==='file:'){status.textContent='Для онлайн-голосования опубликуйте файлы на сайте (HTTPS).';}
-else subscribe(counts=>{const total=counts.reduce((a,b)=>a+b,0);counts.forEach((n,i)=>{document.getElementById('v'+i).textContent=n+' ('+(total?Math.round(n/total*100):0)+'%)';document.getElementById('f'+i).style.width=(total?n/total*100:0)+'%'});status.textContent='Всего голосов: '+total},e=>status.textContent='Нет доступа к голосам: проверьте правила Firestore ('+e.code+')');
+const voteUrl=new URL('голосовать.html',publicPresentationUrl).href;
+document.getElementById('vote-link').textContent=voteUrl;
+const qr=document.createElement('img');qr.alt='QR-код голосования';qr.src='https://api.qrserver.com/v1/create-qr-code/?size=260x260&data='+encodeURIComponent(voteUrl);qr.onload=()=>document.getElementById('vote-qr').replaceChildren(qr);
+if(!firebaseConfig.apiKey||!firebaseConfig.appId){status.textContent='Для голосования нужно заполнить настройки Firebase';}
+else {try{
+ const [{initializeApp},{getAuth,signInAnonymously},{getFirestore,collection,onSnapshot}]=await Promise.all([
+ import('https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js'),import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js'),import('https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js')]);
+ const app=initializeApp(firebaseConfig);await signInAnonymously(getAuth(app));
+ onSnapshot(collection(getFirestore(app),'votes'),snap=>{const counts=[0,0,0];snap.forEach(d=>{const v=d.data();if(Number.isInteger(v.choice)&&v.choice>=0&&v.choice<3)counts[v.choice]++});const total=counts.reduce((a,b)=>a+b,0);counts.forEach((n,i)=>{document.getElementById('v'+i).textContent=n;document.getElementById('f'+i).style.width=(total?100*n/total:0)+'%'});status.textContent='Получено ответов: '+total},()=>status.textContent='Нет доступа к результатам: проверьте правила Firestore');
+}catch(e){status.textContent='Ошибка подключения к Firestore';console.error(e)}}
